@@ -11,6 +11,9 @@ public class DriveContoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetAxis("Vertical") != 0)
+        {
+            transform.Translate(0,0, Input.GetAxis("Vertical") * 0.1f);
+        }
     }
 }
